@@ -1,8 +1,8 @@
 
 const $ = (selector, event, callback) =>{
-    let selectors = document.querySelectorAll(selector);
-    let len = selectors.length;
-    for(let i=0; i<len; ++i){
+    const selectors = document.querySelectorAll(selector);
+    const len = selectors.length;
+    for(var i=0; i<len; ++i){
         if(event){
             selectors[i].addEventListener(event, (e)=>callback(e, selectors[i]));
         }else{
